@@ -1,0 +1,7 @@
+{% extends 'opensource/main.html' %} {% load static %} {% block content_block %}
+<img src="{% static 'imgs/img.png' %}" style="width: 50; height: 50" />
+<h1>hi {{student.name}}</h1>
+<p>age {{student.age}}</p>
+<p>track {{student.student_track}}</p>
+
+{% endblock %}

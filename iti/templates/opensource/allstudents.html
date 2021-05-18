@@ -1,0 +1,16 @@
+{% extends 'opensource/main.html' %} {% block content_block %}
+<h1>All Students</h1>
+
+<table border="1">
+  <th>name</th>
+  <th>age</th>
+  <th>track</th>
+  {% for student in students %}
+  <tr>
+    <td><a href="/opensource/students/{{student.id}}">{{student.name}}</a></td>
+    <td>{{student.age}}</td>
+    <td>{{student.student_track}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
