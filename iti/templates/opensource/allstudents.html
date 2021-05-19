@@ -1,15 +1,19 @@
 {% extends 'opensource/main.html' %} {% block content_block %}
 <h1>All Students</h1>
-
+<a href="/opensource/newstudent">create student</a>
 <table border="1">
   <th>name</th>
   <th>age</th>
   <th>track</th>
+  <th>edit</th>
+  <th>delete</th>
   {% for student in students %}
   <tr>
     <td><a href="/opensource/students/{{student.id}}">{{student.name}}</a></td>
     <td>{{student.age}}</td>
     <td>{{student.student_track}}</td>
+    <td><a href="/opensource/editstudent/{{student.id}}">edit</a></td>
+    <td><a href="/opensource/deletestudent/{{student.id}}">delete</a></td>
   </tr>
   {% endfor %}
 </table>
